@@ -1,32 +1,30 @@
 .header 
-    position: relative
-    display: flex
-    justify-content: space-between
-    align-content: space-between
-    flex-wrap: wrap
-    flex-direction: column   
-    height: 1105px
+    position: relative   
+    min-height: 1105px
     background: url(../img/head.png)
     background-repeat: no-repeat
 
-    &__block
-        margin-top: 109px
-        margin-left: 138px
+    &__block       
+        margin-left: 190px
+        padding-top: 200px
 
-    &__logo 
+    &__logo        
         img
             position: absolute
-            left: 2.81%
-            top: 1.21%
+            top: 1.5rem
+            left: 2.5rem
+            max-width: 159px
+            width: 100%
+            min-height: 125px
+            object-fit: contain
 
-    &__top
-
+    &__top       
+        margin-bottom: 4em
     &__title
         font-weight: bold
         font-size: 55px
-        line-height: 32px
-        color: #fff
-        margin-bottom: 17px
+        line-height: 67px
+        color: #fff  
 
     &__description
         font-size: 22.5px
@@ -34,15 +32,16 @@
         color: #e9e7e7
         margin-top: 0
 
-    &__bottom
+    &__bottom      
         display: flex
-        justify-content: space-between
-        align-items: baseline
+        flex-wrap: wrap
+        grid-template-columns: repeat(auto-fit, minmax(400px, 500px))  
+        justify-items: start       
         color: #fff
 
     &__bottom_left
     &__list
-
+        padding: 20px
     &__list-title
         display: block
         background: #F6D365
@@ -54,14 +53,18 @@
     &__item
         font-size: 18px
         line-height: 32px
+        margin-left: 20px
 
     &__description-bottom
-        width: 1012px
+        max-width: 1012px
         font-weight: bold
         font-size: 32px
         text-align: center
         letter-spacing: 0.02em
+        line-height: 51px
         text-transform: uppercase
         color: #0085FF
         text-shadow: black 0 0 2px
         margin-left: 93px
+        margin-top: 270px
+        padding: 20px

@@ -3,13 +3,14 @@
 @import "base/_variables.sass"
 
 *
-    box-sizing: border-box
+    box-sizing: border-box   
 
 body
     margin: 0
-    padding: 0
+    //padding: 0   
     background: rgb(240, 233, 233)
     font-family: 'Open Sans', sans-serif
+    word-wrap: break-word
 
 .wrapper
     max-width: 1600px
@@ -28,7 +29,19 @@ body
     font-size: 35px
     line-height: 48px
     color: black
-    margin-left: 394px
+    // margin-left: 394px
+    margin-bottom: 25px
+    margin-left: clamp(40px, 24vw, 380px)
+    padding: 20px
+// .title__section
+//     font-weight: bold
+//     font-size: 35px
+//     line-height: 48px
+//     color: black
+//     // margin-left: 394px
+//     margin-bottom: 25px
+//     margin-left: clamp(40px, 24vw, 380px)
+//     padding: 20px
 .title__uppercase 
     font-size: 48px
     text-align: center
