@@ -1,11 +1,13 @@
 .header 
-    position: relative   
+    position: relative  
+    max-width: 1600px 
     min-height: 1105px
     background: url(../img/head.png)
     background-repeat: no-repeat
+    // background-size: contain
 
     &__block       
-        margin-left: 190px
+        margin-left:  190px
         padding-top: 200px
 
     &__logo        
@@ -18,12 +20,14 @@
             min-height: 125px
             object-fit: contain
 
-    &__top       
-        margin-bottom: 4em
+    &__top     
+        margin-right: 10px  
+        margin-bottom: 3em
     &__title
         font-weight: bold
         font-size: 55px
         line-height: 67px
+        margin-bottom: 10px
         color: #fff  
 
     &__description
@@ -35,13 +39,15 @@
     &__bottom      
         display: flex
         flex-wrap: wrap
-        grid-template-columns: repeat(auto-fit, minmax(400px, 500px))  
-        justify-items: start       
+        // grid-template-columns: repeat(auto-fit, minmax(400px, 500px))  
+        justify-content: space-between
+        gap: 10px
+        max-width: 880px   
         color: #fff
-
-    &__bottom_left
+  
     &__list
-        padding: 20px
+        padding:0px 10px 0 10px 
+        
     &__list-title
         display: block
         background: #F6D365
@@ -53,7 +59,8 @@
     &__item
         font-size: 18px
         line-height: 32px
-        margin-left: 20px
+        margin-left: 40px
+       
 
     &__description-bottom
         max-width: 1012px

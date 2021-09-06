@@ -1,6 +1,42 @@
-// @media (max-width: 1200px ) 
+@media only screen and (max-width : 1599px)
+    .app
+        &__wrap
+            grid-template-columns: repeat(auto-fill,280px)
+           
+    .overview__app
+        &-title            
+            padding-top: 60px
+@media only screen and (max-width : 1366px)
+    .overview__app
+        height: 1300px
 
-// @media (max-width: 991px)
+@media only screen and (max-width : 1280px)
+    .app
+        &__wrap
+            grid-template-columns: repeat(auto-fill,235px)
+    .overview__app
+        height: 1200px
+        &-title            
+            padding-top: clamp(10px, 10vh, 32px )
+@media only screen and (max-width : 1080px)       
+    .header
+        &__block    
+            margin-left: 100px  
+ 
+        &__description-bottom
+            margin-left: 40px
+    .app
+        &__wrap
+            grid-template-columns: repeat(auto-fill,220px)
+            margin-left: clamp(40px,12vw,394px)
+    .title
+        margin-left: clamp(40px,12vw,380px)
+    .overview__app
+        height: 1100px
+        &-title            
+            padding-top: 2px
+@media (max-width: 991px)
+      
     
 // @media ( max-width: 767px )
 
