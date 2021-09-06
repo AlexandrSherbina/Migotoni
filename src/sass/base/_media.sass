@@ -17,6 +17,9 @@
             margin-left: 20px
         &__img
             max-width: 500px
+    .offer
+        &__sub-wrap
+            grid-column-gap: 200px
 
 @media only screen and (max-width : 1280px)
     .app
@@ -32,9 +35,18 @@
        
         &__item
             font-size: 22px
+        &__item-sub
+            padding: 20px 0
         &__diagramm
             max-width: 310px
-        
+    .offer
+        &__wrap
+            margin-left: 60px
+            padding-left: 40px
+        &__sub-wrap
+            grid-column-gap: 100px
+            justify-content: space-between
+            
 
 @media only screen and (max-width : 1080px)       
     .header
@@ -50,18 +62,189 @@
     .title
         margin-left: clamp(40px,12vw,380px)
     .overview__app
-        height: 1100px
+        height: 978px
         &-title            
             padding-top: 2px
+        &__title h3
+            font-size: 27px
+
+
     .investment
         &__item
             font-size: 20px
+        &__diagramm
+            padding-top: 150px
     .title__uppercase
         font-size: 37px
+    .offer
+        &__wrap
+            margin-left: 40px
+            padding-left: 40px
+        &__sub-wrap
+            grid-column-gap: 50px
+        &__item
+            font-size: 35px
+            line-height: 48px
+    .registry         
+        &__title
+            margin-left: 0
+            margin-top: 0px
+        &__wrap
+            flex-wrap: wrap
+           
+            
+        &__btn
+
+
 @media (max-width: 991px)
-      
+    .header
+        +flex
+        flex-direction: column
+        
+        &__logo img
+            max-width: 122px
+        &__block    
+            margin-left: 20px 
+        &__title
+            font-size: 48px
+        &__bottom
+            justify-content: flex-start
+        &__list-title
+            font-size: 20px
+        &__item
+            font-size: 15px
+    .overview__app
+        height: 880px     
+        &-title h3
+            margin-top: 0
+            font-size: 27px
+        &-title .line
+            max-width: 300px
+    .investment
+        &__table
+            padding: 20px
+        &__item-sub
+            padding: 5px 0
+        &__diagramm
+            width: 210px
+            padding-left: 5px
+            padding-top:100px
+    .benefits
+        &__img
+            max-width: 380px
+            height: 300px
+        &__list
+            font-size: 21.5px
+        
+    .offer
+        &__wrap
+            margin-left: 20px
+            margin-right: 20px
+            padding-left: 20px
+        &__sub-wrap
+            grid-column-gap: 20px
+        &__item
+            font-size: 30px
+            line-height: 40px
+@media only screen and (max-width : 800px) 
+    .header
+        &__block
+            padding-top: 150px
+        &__title
+            font-size: 30px
+        &__list-title
+            font-size: 15px
+        &__description-bottom
+            font-size: 24px
+        &__description-bottom .orange
+            font-size: 30px
+        &__description-bottom .white
+            font-size: 55px
+    .overview__app
+        height: 760px  
+
+    .benefits
+        &__img
+            max-width: 350px
+           
+        &__list
+            font-size: 20px
+    .offer
+        &__wrap
+            margin-left: 10px
+            margin-right: 10px
+            padding-left: 10px        
+        &__item
+            font-size: 28px
+            line-height: 38px
+    .investment
+        &__item
+            font-size: 16px
+@media ( max-width: 767px )
+    .overview__app
+        margin-top: 50px   
+        height:  573px  
+        &-title h3
+           padding-top: 0
+            
+        &-title .line
+           
+    .title__uppercase
+        font-size: 28px
     
-// @media ( max-width: 767px )
+    .investment
+        &__table-left, &__table-right
+            z-index: 1
+        &__diagramm
+            position: absolute
+            top: -25%
+            left: 25%
+            opacity: 0.5
+    .benefits
+        &__wrap 
+           flex-direction: column
+           align-items: flex-end
+        &__img
+            max-width: 300px
+            height: 200px
+        &__list
+            font-size: 19px
+@media only screen and (max-width : 600px)
+    .header
+        &__top
+            margin-bottom: 0
+        &__title
+            margin-bottom: -6px
+        &__bottom
+           flex-direction: column 
+        &__description-bottom
+            margin-top: 200px
+    .title__uppercase
+        font-size: 20px
+        text-align: center
+    .investment
+        &__wrap
+            flex-wrap: wrap    
+            justify-content: space-evenly 
+            row-gap: 20px
+        &__diagramm
+            position: unset
+            padding: 0
+    .benefits
+
+@media only screen and (max-width : 533px)
+    .header
+        &__title
+            font-size: 23px
+        &__description
+            font-size: 15.5px
+            margin-bottom: 5px
+        &__bottom
+            gap: 0
+    .overview__app
+        height: 480px  
+
+           
 
 // @media ( max-width: 575px )
     
