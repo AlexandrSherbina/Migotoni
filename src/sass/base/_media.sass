@@ -263,16 +263,25 @@
             font-size: 43px
 
 @media only screen and (max-width : 533px)
+    .title
+        text-align: center
+        font-size: 30px
+        margin-left: 0
     .header
         &__title
             font-size: 23px
-        &__description
-            font-size: 15.5px
-            margin-bottom: 5px
-        &__bottom
+        &__description-bottom
+            margin-left: 0     
+
+        &__bottom           
             gap: 0
     .overview__app
-        height: 460px  
+        height: 460px 
+        &_title-sub
+            text-align: left 
+    .investment
+        &__img
+            padding-right: 100px
     .offer
         &__wrap
             padding-left: 5px
@@ -297,11 +306,44 @@
                   
         &__title-sub            
             font-size: 27px 
-
-           
+    
+    .registry
+        &__title
+            max-width: 400px
+            font-size: 20px
+        &__block
+            height: 280px
+        &__btn           
+            font-size: 18px
+            margin: 25px 5px
+            padding: 10px 5px
+        .btn__arrow
+            margin-left: 5px
 
 @media only screen and (max-width : 360px)
-    
+    .header   
+        &__title
+            font-size: 21px 
+        &__description
+            font-size: 14.5px
+        &__item
+            font-size: 14px
+        &__description-bottom
+            font-size: 16.5px
+            margin: 100px 5px 5px 5px
+            margin-bottom: 5px        
+            margin-top: 150px
+
+        &__description-bottom .orange
+            font-size: 29px
+        &__description-bottom .white
+            font-size: 49px
+    .app
+        &__wrap
+            grid-template-columns: repeat(auto-fill,210px)
+            margin: 0
+    .overview__app
+        height: 388px
     .offer       
         &__title
             font-size: 15px
