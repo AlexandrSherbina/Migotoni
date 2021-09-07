@@ -85,6 +85,8 @@
         &__item
             font-size: 35px
             line-height: 48px
+        &__title-sub         
+            font-size: 72px
     .registry         
         &__title
             margin-left: 0
@@ -93,7 +95,7 @@
             flex-wrap: wrap
            
             
-        &__btn
+        
 
 
 @media (max-width: 991px)
@@ -146,6 +148,7 @@
         &__item
             font-size: 30px
             line-height: 40px
+        
 @media only screen and (max-width : 800px) 
     .header
         &__block
@@ -178,6 +181,8 @@
             font-size: 28px
             line-height: 38px
     .investment
+        &__img
+            padding-right: 120px
         &__item
             font-size: 16px
 @media ( max-width: 767px )
@@ -209,6 +214,18 @@
             height: 200px
         &__list
             font-size: 19px
+    .offer
+        &__item
+            font-size: 22px
+        &__discount::after
+            top: -5px
+            left: 29px
+            width: 50px
+            height: 50px
+        &__title-sub
+            text-align: left
+            margin: 0    
+            font-size: 72px
 @media only screen and (max-width : 600px)
     .header
         &__top
@@ -223,6 +240,8 @@
         font-size: 20px
         text-align: center
     .investment
+        &__img
+            padding-right: 200px
         &__wrap
             flex-wrap: wrap    
             justify-content: space-evenly 
@@ -230,7 +249,18 @@
         &__diagramm
             position: unset
             padding: 0
-    .benefits
+    
+    .offer
+        &__sub-wrap
+            //justify-content: unset
+        &__item
+            font-size: 17px   
+        &__discount::after
+            top: -10px
+            left: 23px           
+        &__title-sub
+            text-align: left
+            font-size: 43px
 
 @media only screen and (max-width : 533px)
     .header
@@ -243,9 +273,38 @@
             gap: 0
     .overview__app
         height: 460px  
+    .offer
+        &__wrap
+            padding-left: 5px
+        &__title
+            font-size: 17px
+        &__sub-wrap
+            display: flex
+            justify-content: space-evenly
+            grid-column-gap: 5px
+            padding-right: 5px
+        &__item
+            font-size: 14px   
+        &__default, &__discount
+            padding: 0
+        
+        &__discount::after
+            top: -13px
+            left: -10px   
+            width: 40px
+            height: 40px
+            opacity: 0.6 
+                  
+        &__title-sub            
+            font-size: 27px 
 
            
 
-// @media ( max-width: 575px )
+@media only screen and (max-width : 360px)
     
+    .offer       
+        &__title
+            font-size: 15px
+        &__title-sub
+            font-size: 26px
     
