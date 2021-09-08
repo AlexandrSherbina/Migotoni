@@ -240,6 +240,13 @@
     .title__uppercase
         font-size: 20px
         text-align: center
+    .overview__app      
+        &-title.hide
+            display: none
+        &-title.show
+            display: block
+
+
     .investment
         &__img
             padding-right: 200px
@@ -277,6 +284,7 @@
 
         &__bottom           
             gap: 0
+
     .overview__app        
         &_title-sub
             text-align: left 
@@ -360,6 +368,11 @@
         &__wrap
             grid-template-columns: repeat(auto-fill,210px)
             margin: 0 
+    .overview__app     
+        &-title h3
+            font-size: 25px
+
+           
         
     .offer       
         &__title
@@ -400,10 +413,6 @@
             margin: 0 5px
         &__item .cost
             display: none
-
-       
-            
-
         
     .registry
         jstify-content: flex-end
