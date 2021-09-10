@@ -63,7 +63,7 @@
             <h2 class="title image__title">Имиджевый ролик</h2>
             <div class="image__wrap">
                 <div class="image__video">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kxgMaVJYqFw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eASOKdZUBt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -256,6 +256,12 @@
                 <h2 class="title__uppercase offer__title offer__title-sub">стоимости</h2>         
             </div>
         </section>
+        <section class="chart">
+            <div class="chart-wrap">
+                <canvas id="densityChart" width="600" height="400"></canvas>
+              </div>
+           
+        </section>
 
         <secion >
             <div class="registry">
@@ -288,7 +294,7 @@
                 <form class="feed-form feed-form_mt25" action="#">
                     <input name="name" required placeholder="Ваше имя" type="text"> 
                     <input name="phone" required placeholder="Ваш телефон" type="number"> 
-                    <input name="email" required placeholder="Ваш E-mail" type="email"> 
+                    <!-- <input name="email" required placeholder="Ваш E-mail" type="email">  -->
     
                     <button class="btn btn_submit">Зарегистрироваться</button>
                 </form>
@@ -307,8 +313,12 @@
     </div>
     </main>
   </div>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="/js/script.js"></script>
 </body>
 </html>
