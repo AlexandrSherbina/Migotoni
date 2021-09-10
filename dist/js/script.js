@@ -3,9 +3,9 @@ let densityCanvas = document.getElementById("densityChart");
 
 //Chart.defaults.global.defaultFontFamily = 'Lato';
 Chart.defaults.font.size = 24;
-let newNum = 20;
-let keys1 =( ( newNum -   15 ) / (15 * 100 / 100)) + 1;
-console.log( keys1.toFixed(4)); 
+// let newNum = 20;
+// let keys1 =( ( newNum -   15 ) / (15 * 100 / 100)) + 1;
+// console.log( keys1.toFixed(4)); 
 
 
 let case1 = {
