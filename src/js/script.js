@@ -1,18 +1,36 @@
 console.log('TEst');
+
  //==chartist js==========================//
-var data = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+ const count = 45;
+ const max = 100;
+ 
+
+
+let data = {
+  labels: ["Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь", "Январь", "Февраль", "Март" , "Апрель", "Май", "Июнь"],
     series: [
-    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+    [1 , 33.5, 80]
+   
   ]
 };
 
-var options = {
-  seriesBarDistance: 15
+let options = {
+ height: 600,
+  seriesBarDistance: 60,
+
+  //stackBars: true,
+  axisY: {   
+    //onlyInteger: true,    
+    offset: 60,
+    labelInterpolationFnc: function(value) {
+      return  value +'%';
+    }
+  },
+
+  
 };
 
-var responsiveOptions = [
+let responsiveOptions = [
   ['screen and (min-width: 641px) and (max-width: 1024px)', {
     seriesBarDistance: 10,
     axisX: {
@@ -32,6 +50,8 @@ var responsiveOptions = [
 ];
 
 new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
+
+
 
 // ==Chart============================================================//
 // let densityCanvas = document.getElementById("chart-price");

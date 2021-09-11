@@ -2,8 +2,8 @@
 @import "base/_mixins.sass"
 @import "base/_variables.sass"
 
-@import "_my-chartist-settings.scss";
-@import "chartist/dist/scss/chartist.scss";
+//@import "_my-chartist-settings.scss";
+//@import "chartist/dist/scss/chartist.scss";
 
 *
     box-sizing: border-box   
@@ -52,7 +52,19 @@ body
     margin: 40px 0 20px 0
     padding: 10px 20px
     font-size: 30px
+.ct-series-a .ct-bar 
+    /* Colour of your bars */
+    stroke: #009688
+    /* The width of your bars */
+    stroke-width: 6%
+
     
+    /* Yes! Dashed bars! */
+    //stroke-dasharray: 20px
+    /* Maybe you like round corners on your bars? */
+    //stroke-linecap: round
+
+
 
 
 
