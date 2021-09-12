@@ -2,16 +2,43 @@
 @import "base/_mixins.sass"
 @import "base/_variables.sass"
 
-//@import "_my-chartist-settings.scss";
-//@import "chartist/dist/scss/chartist.scss";
 
-*
-    box-sizing: border-box   
+*,
+*::before,
+*::after 
+    padding: 0
+    margin: 0
+    border: 0
+    box-sizing: border-box
 
-body
-    margin: 0     
-    background: rgb(240, 233, 233)
-    font-family: 'Open Sans', sans-serif
+a 
+    text-decoration: none
+ul,ol, li 
+    list-style: none
+
+img 
+    vertical-align: top
+
+h1,h2,h3,h4,h5,h6
+    font-weight: inherit
+    font-size: inherit
+
+html,
+body 
+    height: 100%
+    line-height: 1
+    font-style: 14px
+    background-color: #555252
+    font-family: Arial, "Helvetica Neue", sans-serif
+    
+
+// *
+//     box-sizing: border-box   
+
+// body
+//     margin: 0     
+//     background: rgb(240, 233, 233)
+//     font-family: 'Open Sans', sans-serif
    
 
 .wrapper
@@ -77,6 +104,9 @@ body
 @import "blocks/_offer.sass"
 @import "blocks/_chart.sass"
 @import "blocks/_registry.sass"
+@import "blocks/_form.sass"
+
+
 @import "blocks/_modal.sass"
 @import "blocks/_feed.sass"
 

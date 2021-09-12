@@ -285,6 +285,64 @@
             </div>        
         </secion>
 
+        <div class="wrapper-form">
+            <div class="form">
+                <form id="form" action="#" class="form__body">
+                    <h1 class="form__title">Отправка данных на почту</h1>
+                    <div class="form__item">
+                        <label for="formFirstName" class="form__label">Имя*:</label>
+                        <input id="formFirstName" type="text" name="fname" class="form__input _req">
+                    </div>
+                    <div class="form__item">
+                        <label for="formLastmName" class="form__label">Фамилия*:</label>
+                        <input id="formLastName" type="text" name="lname" class="form__input _req">
+                    </div>
+                    <div class="form__item">
+                        <label for="formPhone" class="form__label">Телефон*:</label>
+                        <input id="formaPhone" type="tel" name="phone" class="form__input _req">
+                    </div>
+                    <div class="form__item">
+                       <div class="form__label">Левша или правша?</div>
+                       <div class="options">
+                            <div class="options__item">
+                               <input id="formRightHand" checked type="radio" value="right" name="hand" class="options__input">
+                               <label for="formRightHand" class="options__label"><span>Правша</span></label>
+                            </div>                              
+                            <div class="options__item">
+                               <input id="formLeftHand" type="radio" value="left" name="hand" class="options__input">
+                               <label for="formLeftHand" class="options__label"><span>Левша</span></label>
+                            </div>                              
+                       </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="checkbox">
+                           <input id="formQuestion1" checked type="checkbox"  name="question" class="checkbox__input">
+                           <label for="formQuestion1" class="checkbox__label"><span>у вас финансовый вопрос</span></label>
+                        </div>                              
+                        <div class="checkbox">
+                           <input id="formQuestion2" type="checkbox"  name="hand" class="checkbox__input">
+                           <label for="formQuestion2" class="checkbox__label"><span>у вас юридический вопрос</span></label>
+                        </div>                              
+                        <div class="checkbox">
+                           <input id="formQuestion3" type="checkbox"  name="hand" class="checkbox__input">
+                           <label for="formQuestion3" class="checkbox__label"><span> у вас технический  вопрос</span></label>
+                        </div>                              
+                   </div>
+                    <div class="form__item">
+                        <label for="formMessage" class="form__label">Сообщение*:</label>
+                        <textarea name="message" id="formMessage"   class="form__input"></textarea>
+                    </div>
+                    <div class="form__item">
+                        <div class="checkbox">
+                            <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+                            <label for="formAgreement" class="checkbox__label "><span> Я даю свое согласие на обработку персональьных данных в соответствии с <a href="">Условиями</a>*  </span></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="form__button">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+
         <div  class="modal">
             <div class="modal" id="ex1">                
                 <div class="modal__subtitle">Регистрация</div>
