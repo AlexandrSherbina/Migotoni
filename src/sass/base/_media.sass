@@ -14,7 +14,7 @@
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,280px)
-           
+   
     .overview__app
         &-title            
             padding-top: 60px
@@ -34,6 +34,8 @@
             grid-column-gap: 200px
 
 @media only screen and (max-width : 1280px)
+    .title__uppercase 
+        font-size: calc( 16px + (38 - 16) * ((100vw - 320px) / (1280 - 320) ))
     .header__top      
         padding-right:  calc( 20px + (182 - 120) * ((100vw - 320px) / (1280 - 320) ))
     .header__background
@@ -47,15 +49,15 @@
             padding-top: clamp(10px, 10vh, 32px )
 
     .investment
+        &__table 
+            padding-left: calc( 20px + (60 - 20) * ((100vw - 320px) / (1280 - 320) ))
+            padding-right: calc( 20px + (60 - 20) * ((100vw - 320px) / (1280 - 320) ))
         &__img
-            max-width: 550px
-       
-        &__item
-            font-size: 22px
-        &__item-sub
-            padding: 20px 0
+            max-width: 550px      
+
         &__diagramm
             max-width: 310px
+            padding-top: 175px
     .offer
         &__wrap
             margin-left: 60px
@@ -95,8 +97,7 @@
             font-size: 20px
         &__diagramm
             padding-top: 150px
-    .title__uppercase
-        font-size: 37px
+  
     .offer
         &__wrap
             margin-left: 40px
@@ -118,13 +119,8 @@
 @media (max-width: 991px)
     .header
         +flex
-        flex-direction: column
-        
-        &__logo img
-            //max-width: 122px
-        &__block    
-            //margin-left: 20px 
-       
+        flex-direction: column      
+   
         &__bottom
             justify-content: flex-start
         &__list-title
@@ -143,13 +139,12 @@
             max-width: 300px
     .investment
         &__table
-            padding: 20px
-        &__item-sub
-            padding: 5px 0
+            padding: 20px      
+
         &__diagramm
             width: 210px
             padding-left: 5px
-            padding-top:100px
+     
     .benefits
         &__img
             max-width: 380px
@@ -183,7 +178,7 @@
             font-size: 55px   
     .app
         &__wrap
-            grid-template-columns: repeat(auto-fill,169px)
+            grid-template-columns: repeat(auto-fill,188px)
 
     .benefits
         &__img
@@ -214,10 +209,7 @@
        
         &-title h3
            padding-top: 0            
-        
-           
-    .title__uppercase
-        font-size: 28px
+
     
     .investment
         &__table-left, &__table-right
@@ -227,6 +219,7 @@
             top: -25%
             left: 25%
             opacity: 0.5
+   
     .benefits
         &__wrap 
            flex-direction: column
@@ -256,7 +249,7 @@
         &__description-bottom
             margin-top: 200px
     .title__uppercase
-        font-size: 20px
+       
         text-align: center
     .overview__app      
         &-title.hide
@@ -314,6 +307,10 @@
     .overview__app        
         &_title-sub
             text-align: left 
+    .app
+        &__wrap           
+            grid-template-columns: repeat(auto-fill,164px)
+            gap: 10px
 
     .investment
         &__img
@@ -388,7 +385,7 @@
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,210px)
-            margin: 0 
+            
     .overview__app     
         &-title h3
             font-size: 25px
@@ -405,6 +402,9 @@
     .registry
         &__btn
             font-size: 17px
+        &__block
+            margin-left: 10px
+            margin-right: 10px
 @media only screen and (max-width : 320px)
     .title
         font-size: 23px

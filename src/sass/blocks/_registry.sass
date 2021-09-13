@@ -1,8 +1,7 @@
 .registry 
     display: flex
     align-items: center
-    flex-direction: column
-    //justify-content: space-evenly
+    flex-direction: column  
     justify-content: center
     height: 1348px
     background-image: url(../img/footer.png)
@@ -29,6 +28,12 @@
         border-radius: 8px  
         margin-left: 20px
         margin-right: 20px
+    &__block.pink
+        background: #F2DADA
+    &__block.blue
+        background: linear-gradient(180deg, #667EEA 99.99%, rgba(118, 75, 162, 0) 100%)
+        filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.25))
+
        
     &__logo
         max-width: 78.37px
@@ -45,34 +50,43 @@
         align-items: center
         justify-content: space-evenly
         width: 466px  
+        font-family: Roboto
+        font-style: normal
         font-weight: bold
-        font-size: 24px
-        line-height: 32px         
+        font-size: 28px
+        line-height: 32px     
         margin: 64px 10px
-        padding: 16px 32px    
+        padding: 16px 32px 
+        text-transform: uppercase
+
+
+        background: linear-gradient(180deg, #30CFD0 0%, #6849D4 100%)
+        color: #fff
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25)
+        border-radius: 8px
 
     &__btn:active
          transform: translateY(1px)
+    &__btn a
+        color: white
     &__btn-transition       
-        background: #FCFCFC
-        color: #7D17FF
+        // background: #FCFCFC
+        // color: #7D17FF
     &__btn-transition:hover
-        background-color: #eee
+        //background-color: #eee
     &__btn-transition:active        
-        background-color: #eee     
+        //background-color: #eee     
        
 
     &__btn-callback
-        background: #F1A208
-        color: #FFFFFF
+        // background: #F1A208
+        // color: #FFFFFF
     &__btn-callback:hover 
-        background: #d18e09
+        //background: #d18e09
    
        
     .btn__arrow
+        display: inline
         margin-left: 32px
-    .pink
-        background: #F2DADA
-    .blue
-        background: linear-gradient(180deg, #667EEA 99.99%, rgba(118, 75, 162, 0) 100%)
-        filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.25))
+  
+    
