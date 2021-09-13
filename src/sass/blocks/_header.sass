@@ -1,39 +1,49 @@
 .header 
     position: relative  
-    max-width: 1600px 
-    min-height: 1105px
-    background: url(../img/head.png)
-    background-repeat: no-repeat
+    margin-bottom: 307px
 
 
-    &__block       
-        margin-left:  190px
-        padding-top: 200px
+    &__block      
+        +flex
+        margin: 0 10px
+       
+    &__logo  
+        margin-left: 70px
+        margin-top: 50px
+        img              
+            max-width: 333px            
+            object-fit: cover
 
-    &__logo        
+    &__top    
+        //margin: 0 20px
+        padding:  87px 182px 0px 92px
+
+      
+        // calc( 20px + (488 - 20) * ((100vw - 320px) / (1600 - 320) ))
+
+    &__title           
+        font-size: 36px
+        line-height: 142%
+        letter-spacing: 0.09em
+        text-transform: uppercase
+        background: linear-gradient(180deg, #2F9EB8 0%, #7D17FF 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: #7D17FF        
+        
+    &__background        
+        position: absolute
+        top: 77px
+        right: 0
         img
-            position: absolute
-            top: 1.5rem
-            left: 2.5rem
-            max-width: 159px
-            width: 100%
-            min-height: 125px
-            object-fit: contain
-
-    &__top     
-        margin-right: 10px  
-        margin-bottom: 3em
-    &__title
-        font-weight: bold
-        font-size: 55px
-        line-height: 67px
-        margin-bottom: 10px
-        color: #fff  
+            max-width: 325px
+            object-fit: cover
+            object-position: right
 
     &__description
         font-size: 22.5px
         line-height: 32px
-        color: #e9e7e7
+        color: #1b1a1a
         margin-top: 0
 
     &__bottom      

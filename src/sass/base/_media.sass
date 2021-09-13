@@ -1,4 +1,16 @@
-@media only screen and (max-width : 1599px)
+@media only screen and (max-width : 1600px)
+    .header
+        margin-bottom: calc( 20px + (307 - 20) * ((100vw - 320px) / (1600 - 320) ))
+        &__logo
+            margin-left: calc( 20px + (70 - 20) * ((100vw - 320px) / (1600 - 320) ))
+        &__top     
+            padding-right:  calc( 20px + (182 - 20) * ((100vw - 320px) / (1600 - 320) ))
+            padding-top: calc( 20px + (87 - 20) * ((100vw - 320px) / (1600 - 320) ))
+        &__title
+            font-size: calc( 18px + (36 - 18) * ((100vw - 320px) / (1600 - 320) ))
+        &__background            
+            img
+                max-width: calc( 10px + (325 - 20) * ((100vw - 320px) / (1600 - 320) ))
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,280px)
@@ -9,6 +21,7 @@
    
 
 @media only screen and (max-width : 1366px)
+    
           
     .benefits        
         &__wrap
@@ -21,6 +34,11 @@
             grid-column-gap: 200px
 
 @media only screen and (max-width : 1280px)
+    .header__top      
+        padding-right:  calc( 20px + (182 - 120) * ((100vw - 320px) / (1280 - 320) ))
+    .header__background
+        top: calc( 77px + (77 + 20) * ((100vw - 320px) / (1280 - 320) ))
+   
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,235px)
@@ -47,11 +65,17 @@
             justify-content: space-between
             
 
-@media only screen and (max-width : 1080px)       
+@media only screen and (max-width : 1080px)           
     .header
-        &__block    
-            margin-left: 100px  
- 
+        
+        &__top
+            padding-left:  calc( 20px + (92 + 20) * ((100vw - 320px) / (1080 - 320) ))
+        &__logo        
+            img
+                max-width: calc( 50px + (400 + 160) * ((100vw - 320px) / (1080 - 320) ))  
+        &__background
+            top: calc( 149px + (77 + 20) * ((100vw - 320px) / (1080 - 320) ))
+
         &__description-bottom
             margin-left: 40px
     .app
@@ -98,11 +122,10 @@
         flex-direction: column
         
         &__logo img
-            max-width: 122px
+            //max-width: 122px
         &__block    
-            margin-left: 20px 
-        &__title
-            font-size: 48px
+            //margin-left: 20px 
+       
         &__bottom
             justify-content: flex-start
         &__list-title
@@ -148,11 +171,8 @@
         
 @media only screen and (max-width : 800px) 
     .header
-        &__block
-            padding-top: 150px
-        &__title
-            font-size: 30px  
-            margin: 0     
+        &__background
+            top: calc( 209px + (77 + 20) * ((100vw - 320px) / (1280 - 320) ))          
         &__description
             font-size: 16px
         &__list-title
@@ -342,12 +362,8 @@
 @media only screen and (max-width : 360px)
     
     .header  
-        &__block
-            padding-top: 138px 
-        &__logo img
-            max-width: 97px
-        &__title
-            font-size: 20px        
+       
+         
         &__item, &__list-title
             font-size: 14px        
 
@@ -387,15 +403,10 @@
 @media only screen and (max-width : 320px)
     .title
         font-size: 23px
-    .header   
-        &__block
-            padding-top: 98px
-        &__logo img
-            max-width: 87px
-            top: -0.5rem
-            left: 3.5rem  
-        &__title
-            font-size: 18px
+    .header 
+       
+     
+      
         &__description
             font-size: 12px
         &__list-title
