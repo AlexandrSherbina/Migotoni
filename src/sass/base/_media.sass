@@ -10,7 +10,7 @@
             font-size: calc( 16px + (36 - 18) * ((100vw - 320px) / (1600 - 320) ))
         &__background            
             img
-                max-width: calc( 10px + (325 - 20) * ((100vw - 320px) / (1600 - 320) ))
+                max-width: calc( 50px + (325 - 120) * ((100vw - 320px) / (1600 - 320) ))
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,280px)
@@ -69,12 +69,11 @@
     .header
         
         &__top
-            padding-left:  calc( 20px + (92 + 20) * ((100vw - 320px) / (1080 - 320) ))
+            padding-left:  calc( 10px + (70 + 10) * ((100vw - 320px) / (1080 - 320) ))
+            padding-right: calc(10px + (182 - 148) * ((100vw - 320px)/ (1280 - 320)))
         &__logo        
             img
-                max-width: calc( 50px + (400 + 160) * ((100vw - 320px) / (1080 - 320) ))  
-        &__background
-            top: calc( 149px + (77 + 20) * ((100vw - 320px) / (1080 - 320) ))
+                max-width: calc( 50px + (400 - 200) * ((100vw - 320px) / (1080 - 320) ))  
 
         &__description-bottom
             margin-left: 40px
@@ -171,8 +170,7 @@
         
 @media only screen and (max-width : 800px) 
     .header
-        &__background
-            top: calc( 209px + (77 + 20) * ((100vw - 320px) / (1280 - 320) ))          
+               
         &__description
             font-size: 16px
         &__list-title
@@ -207,7 +205,10 @@
         &__item
             font-size: 16px
 @media ( max-width: 767px )
-    
+    .header 
+        &__title 
+            font-size: calc(16px + (36 - 25) * ((100vw - 320px)/ (1600 - 320)))
+
     .overview__app
         margin-top: 50px  
        
@@ -249,9 +250,9 @@
             font-size: 72px
 @media only screen and (max-width : 600px)
     .header
-     
-        &__bottom
-           flex-direction: column 
+      &__title 
+        font-size: calc(14px + (36 - 34) * ((100vw - 320px)/ (1600 - 320)))
+ 
         &__description-bottom
             margin-top: 200px
     .title__uppercase
@@ -292,7 +293,16 @@
         font-size: 30px
         margin-left: 0
     .header
-      
+        &__block
+            flex-wrap: wrap
+            justify-content: flex-start
+        &__top
+            padding-top: calc(10px + (87 - 20) * ((100vw - 320px)/ (1600 - 320)))
+        &__logo
+            margin-top: 20px
+        &__background
+            top: calc( 154px + (77 + 20) * ((100vw - 320px) / (1280 - 320) ))
+        
         &__description
             font-size: 14px
         &__description-bottom
@@ -435,8 +445,7 @@
 
 @media only screen and (max-width : 280px)
     .header
-        &__title
-            font-size: 17px        
+       
         &__list-title
             font-size: 12px
         &__description-bottom .orange
