@@ -241,10 +241,11 @@
             text-align: left
             margin: 0    
             font-size: 72px
+    
 @media only screen and (max-width : 600px)
     .header
       &__title 
-        font-size: calc(14px + (36 - 34) * ((100vw - 320px)/ (1600 - 320)))
+        font-size: calc(14px + (36 - 34) * ((100vw - 320px)/ (600 - 320)))
  
         &__description-bottom
             margin-top: 200px
@@ -279,6 +280,16 @@
         &__title-sub
             text-align: left
             font-size: 43px
+    .modal__subtitle
+       font-size: calc(25px + (34 - 25) * ((100vw - 320px)/ (600 - 320)))
+    .feed-form input
+        font-size: calc(14px + (31 - 14) * ((100vw - 320px)/ (600 - 320)))
+    .feed-form__checkbox
+        font-size: calc(14px + (28 - 20) * ((100vw - 320px)/ (600 - 320)))
+    .feed-form__checkbox input 
+        width: calc(20px + (26 - 20) * ((100vw - 320px)/ (600 - 320)))
+    .feed-form__checkbox label
+        margin-left: calc(10px + (20 - 10) * ((100vw - 320px)/ (600 - 320)))
 
 @media only screen and (max-width : 533px)
     .title

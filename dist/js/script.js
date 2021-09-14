@@ -80,55 +80,55 @@ console.log('TEst');
 
 
  //==chartist js==========================//
- const count = 45;
- const max = 100;
+//  const count = 45;
+//  const max = 100;
  
 
 
-let data = {
-  labels: ["Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь", "Январь", "Февраль", "Март" , "Апрель", "Май", "Июнь"],
-    series: [
-    [1 , 33.5, 80]
+// let data = {
+//   labels: ["Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь", "Январь", "Февраль", "Март" , "Апрель", "Май", "Июнь"],
+//     series: [
+//     [1 , 33.5, 80]
    
-  ]
-};
+//   ]
+// };
 
-let options = {
- height: 600,
-  seriesBarDistance: 60,
+// let options = {
+//  height: 600,
+//   seriesBarDistance: 60,
 
-  //stackBars: true,
-  axisY: {   
-    //onlyInteger: true,    
-    offset: 60,
-    labelInterpolationFnc: function(value) {
-      return  value +'%';
-    }
-  },
+//   //stackBars: true,
+//   axisY: {   
+//     //onlyInteger: true,    
+//     offset: 60,
+//     labelInterpolationFnc: function(value) {
+//       return  value +'%';
+//     }
+//   },
 
   
-};
+// };
 
-let responsiveOptions = [
-  ['screen and (min-width: 641px) and (max-width: 1024px)', {
-    seriesBarDistance: 10,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value;
-      }
-    }
-  }],
-  ['screen and (max-width: 640px)', {
-    seriesBarDistance: 5,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value[0];
-      }
-    }
-  }]
-];
+// let responsiveOptions = [
+//   ['screen and (min-width: 641px) and (max-width: 1024px)', {
+//     seriesBarDistance: 10,
+//     axisX: {
+//       labelInterpolationFnc: function (value) {
+//         return value;
+//       }
+//     }
+//   }],
+//   ['screen and (max-width: 640px)', {
+//     seriesBarDistance: 5,
+//     axisX: {
+//       labelInterpolationFnc: function (value) {
+//         return value[0];
+//       }
+//     }
+//   }]
+// ];
 
-new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
+// new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
 
 
 
