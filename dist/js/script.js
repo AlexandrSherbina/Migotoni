@@ -190,3 +190,5 @@ console.log('TEst scriptjs');
 document.getElementById('form-feed').addEventListener('submit', function (e) {
    e.preventDefault();
 });
+
+console.log('test 2');
