@@ -139,9 +139,9 @@
         <section class="benefits">
            
             <div class="benefits__wrap">
+              <div>
                 <h2 class="benefits__title">почему мы:</h2>
-                <ul class="benefits__list">
-                   
+                <ul class="benefits__list">                   
                     <li class="benefits__item">полностью украинский продукт</li>
                     <li class="benefits__item">самая прогрессивная, престижная и востребованная сфера</li>
                     <li class="benefits__item"> права совладения оформляются согласно  законодательства Украины</li>
@@ -149,6 +149,7 @@
                     <li class="benefits__item">многуровневый источник роста вашего капитала</li>
                     <li class="benefits__item">максимально выгодные условия, что бы присоединиться к нам именно сегодня.</li>
                 </ul>
+              </div>
                 <img src="img/people2.png" alt="benefits" class="benefits__img">
             </div>
         </section>
@@ -266,9 +267,9 @@
                     <div class="registry__block blue">
                         <img src="img/logo.png" alt="logo" class="registry__logo">
                        
-                        <button class="btn registry__btn registry__btn-callback">
+                        <button data-modal="consultation" class="btn registry__btn registry__btn-callback">
                                <!-- Link to open the modal -->
-                            <a href="#ex1" rel="modal:open">
+                            <!-- <a href="#ex1" rel="modal:open"></a> -->
                                 узнать больше                              
                                <div class="btn__arrow">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +278,7 @@
                                     <path d="M20.5 13.2725H4.5C3.9 13.2725 3.5 12.8725 3.5 12.2725C3.5 11.6725 3.9 11.2725 4.5 11.2725H20.5C21.1 11.2725 21.5 11.6725 21.5 12.2725C21.5 12.8725 21.1 13.2725 20.5 13.2725Z" fill="white"/>
                                 </svg>
                                </div>
-                            </a>
+                            
                             </button>
                     </div>
                 </div>    
@@ -285,41 +286,41 @@
         </secion>
 
   
-        <div  class="modal">
-            <div class="modal" id="ex1">                
-                <div class="modal__subtitle">Получить консультацию</div>
+     <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Получить консультацию</div>
+            
+            <form class="feed-form feed-form_mt25" id="form-feed" action="#">
+                <input name="fname"  placeholder="Имя" type="text" > 
+                <input name="lname"  placeholder="Фамилия" type="text" > 
+                <input name="phone"  placeholder="Телефон" > 
+                <!-- <input name="email" required placeholder="Ваш E-mail" type="email">  -->
                 
-                <form class="feed-form feed-form_mt25" id="form-feed" action="#">
-                    <input name="fname" required placeholder="Имя" type="text"> 
-                    <input name="lname" required placeholder="Фамилия" type="text"> 
-                    <input name="phone" required placeholder="Телефон" type="number" > 
-                    <!-- <input name="email" required placeholder="Ваш E-mail" type="email">  -->
-                    
-                     <div class="feed-form__checkbox">
-                            <input type="checkbox" id="question1" name="question1" value="question1">
-                            <label for="question1">у вас финансовый вопрос</label>
-                    </div>
-                    <div class="feed-form__checkbox">
-                        <input type="checkbox" id="question2" name="question2" value="question2">
-                        <label for="question2">у вас юридический вопрос</label>
-                    </div>
+                 <div class="feed-form__checkbox">
+                        <input type="checkbox" id="question1" name="question1" value="question1">
+                        <label for="question1">у вас финансовый вопрос</label>
+                </div>
+                <div class="feed-form__checkbox">
+                    <input type="checkbox" id="question2" name="question2" value="question2">
+                    <label for="question2">у вас юридический вопрос</label>
+                </div>
 
-                    <div class="feed-form__checkbox">
-                        <input type="checkbox" id="question3" name="question3" value="question3">
-                          <label for="question3">у вас технический  вопрос</label>
-                    </div>
-        
-                    <button type="submit" class="btn btn_submit">ДАЛЕЕ</button>
-                    <div class="feed-form__checkbox">
-                        <input type="checkbox" checked id="agreement2" name="agreement2" value="agreement2">
-                          <label for="agreement2">Согласитесь с Условиями и политикой</label>
-                    </div>
-                </form>
-            </div>
-            <!-- <button class="btn"><a href="#" rel="modal:close">Close</a></button> -->
-          </div> 
-          
-        
+                <div class="feed-form__checkbox">
+                    <input type="checkbox" id="question3" name="question3" value="question3">
+                      <label for="question3">у вас технический  вопрос</label>
+                </div>
+    
+                <button class="btn btn_submit">ДАЛЕЕ</button>
+
+                <div class="feed-form__checkbox">
+                    <input  type="checkbox"  checked id="agreement2" name="agreement2" value="agreement2">
+                      <label for="agreement2">Согласитесь с Условиями и политикой</label>
+                </div>
+            </form>
+        <!-- <div class="modal" id="ex1"> </div> -->
+        <!-- <button class="btn"><a href="#" rel="modal:close">Close</a></button> -->
+        </div> 
 
         <div class="modal modal_mini" id="thanks">
             <div class="modal__close">&times;</div>
@@ -330,6 +331,12 @@
             </div>
             <button type="button" class="btn btn_submit">вернуться на главную страницу</button>
         </div>
+
+     </div>
+          
+        
+
+      
         
   
     
@@ -338,10 +345,13 @@
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    
     <!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script> -->  
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js" ></script>
    
 

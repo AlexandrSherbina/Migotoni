@@ -187,8 +187,102 @@ let barChart = new Chart(densityCanvas, {
 
 //=====feed-form=====================//
 
-document.getElementById('form-feed').addEventListener('submit', function (e) {
-   e.preventDefault();
+// document.getElementById('form-feed').addEventListener('submit', function (e) {
+//    e.preventDefault();
+// });
+
+// Modal
+
+$('[data-modal=consultation]').on('click', function () {
+    $('.overlay, #consultation').fadeIn('slow');
 });
 
-console.log('test 2');
+$('.modal__close').on('click', function () {
+   $('.overlay, #consultation, #thanks').fadeOut('slow');
+});
+
+$('#consultation form').validate({
+  rules: {
+    fname:  {
+      required: true,
+      minlength: 2
+    },
+    lname: "required",
+    phone: "required"
+  },
+  messages: {
+    fname: 
+    {
+      required: "Пожалуйста введите свою фамилию",
+      minlength: jQuery.validator.format("Введите {0} символа!")
+    },
+    lname: "Пожалуйста введите свое имя",
+    phone: "Пожалуйста введите свой телефон",
+    email: {
+      required: "Пожалуйста введите свою почту",
+      email: "Неправильно введен адресс почты name@domain.com"
+    }
+  }
+});
+
+function validateForms(form) {
+  $(form).validate({
+    rules: {
+      fname:  {
+        required: true,
+        minlength: 2
+      },
+      lname: "required",
+      phone: "required"
+    },
+    messages: {
+      fname: 
+      {
+        required: "Пожалуйста введите свою фамилию",
+        minlength: jQuery.validator.format("Введите {0} символа!")
+      },
+      lname: "Пожалуйста введите свое имя",
+      phone: "Пожалуйста введите свой телефон",
+      email: {
+        required: "Пожалуйста введите свою почту",
+        email: "Неправильно введен адресс почты name@domain.com"
+      }
+    }
+  });
+}
+
+validateForms('#consultation form');
+
+$('input[name=phone]').mask("+38(999) 999-99-99");
+
+// $('form').submit(function (e) {
+//   e.preventDefault();
+//   $.ajax({
+//     type: 'POST',
+//     url: "mailer/smart.php",
+//     data: $(this).serialize(),
+//   }).done(function () {
+//       $(this).find('input').val('');
+//       $("#consultation").fadeOut();
+//       $('.overlay, #thanks').fadeIn('slow');
+
+//       $('form').trigger('reset');
+//   });
+//   return false;
+// });
+
+$('form').submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+  }).done(function() {
+      $(this).find("input").val("");
+      $('#consultation').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+
+      $('form').trigger('reset');
+  });
+  return false;
+});
