@@ -197,9 +197,10 @@ $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
 });
 
-$('.modal__close').on('click', function () {
+$('.modal__close, .back-home').on('click', function () {
    $('.overlay, #consultation, #thanks').fadeOut('slow');
 });
+
 
 $('#consultation form').validate({
   rules: {

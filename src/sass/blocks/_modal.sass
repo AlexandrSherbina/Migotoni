@@ -14,13 +14,15 @@
     left: 50%
     transform: translate(-50%, -50%)   
     max-width: 500px
-    //min-height: 1100px    
+    // flex: 0 0 75%
+    // max-width: 75%
+    
     background: linear-gradient(180deg,#30cfd0 0,#330867 100%)
     padding: 38px 40px 40px 40px
     &__close 
         position: absolute
-        top: 0
-        right: -40px
+        top: -11px
+        right: -13px
         font-size: 41px
         line-height: 21px
         color: $main-color
@@ -34,12 +36,13 @@
         margin-bottom: 40px
     
     &__descr 
-        color: #0d0d0d
+        color: #ffffff
         font-size: 14px
         font-weight: 500
         text-align: center
     
     &_mini 
+        text-align: center
         min-height: 140px
     .error
         border: 1px solid red
