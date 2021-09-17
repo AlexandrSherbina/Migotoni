@@ -35,9 +35,9 @@
 
 @media only screen and (max-width : 1280px)
     .title__uppercase 
-        font-size: calc( 16px + (38 - 16) * ((100vw - 320px) / (1280 - 320) ))
+        font-size: calc( 16px + (38 - 24) * ((100vw - 320px) / (1280 - 320) ))
     .fz-25 
-        font-size: calc( 14px + (25 - 14) * ((100vw - 320px) / (1280 - 320) ))
+        font-size: calc( 14px + (25 - 20) * ((100vw - 320px) / (1280 - 320) ))
     
     .header__top      
         padding-right:  calc( 20px + (182 - 120) * ((100vw - 320px) / (1280 - 320) ))
@@ -263,6 +263,11 @@
             text-align: left
             margin: 0    
             font-size: 72px
+    .chart
+        margin: calc(20px + (150 - 70) * ((100vw - 320px)/ (767 - 320)))
+
+    .chart-wrap
+        padding: 0 calc(20px + (70 - 70) * ((100vw - 320px)/ (767 - 320))) 0px calc(20px + (120 - 120) * ((100vw - 320px)/ (767 - 320)))
     
 @media only screen and (max-width : 600px)
     .header
@@ -270,7 +275,8 @@
         font-size: calc(14px + (36 - 34) * ((100vw - 320px)/ (600 - 320)))
  
     .title__description-bottom
-        //margin-top: 200px
+        font-size: calc(14px + (24 - 20) * ((100vw - 320px)/ (600 - 320)))
+        text-shadow: black 0 0 1px  
     .title__uppercase       
         text-align: center
     .overview__app      
@@ -370,12 +376,13 @@
             font-size: 27px 
     
     .registry
-        justify-content: flex-end
+       
+        background-position: bottom
         &__wrap
             margin-bottom: 50px
+            gap: 70px
         &__title
-            max-width: 400px
-            //font-size: 20px
+            max-width: 400px           
         &__block
             height: 280px
         &__btn     
@@ -400,15 +407,7 @@
     .header  
               
         &__item, &__list-title
-            font-size: 14px        
-
-    .title__description-bottom
-        font-size: 16.5px
-        // margin: 100px 5px 5px 5px
-        // margin-bottom: 5px        
-        // margin-top: 150px
-        text-shadow: black 0 0 1px  
-            
+            font-size: 14px         
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,210px)
@@ -421,7 +420,7 @@
         
     .offer       
         &__title
-            font-size: 15px
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px)/ (360 - 320)))
         &__title-sub
             font-size: 26px
         &__item
@@ -443,8 +442,6 @@
             font-size: 12px
         &__list-title
             font-size: 12px             
-    .title__description-bottom
-        font-size: 15px
 
     .image
         margin: 49px auto 80px
