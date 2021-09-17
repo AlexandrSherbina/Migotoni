@@ -385,8 +385,10 @@
             padding: 10px 5px
         .btn__arrow
             margin-left: 5px
-    
-
+    .modal .error
+        font-size: calc(14px + (20 - 18) * ((100vw - 320px)/ (533 - 320)))
+    .feed-form__option
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px)/ (533 - 320)))
 
 @media only screen and (max-width : 420px)
     .title
@@ -430,6 +432,8 @@
         &__block
             margin-left: 10px
             margin-right: 10px
+    .modal
+        padding: 20px
 @media only screen and (max-width : 320px)
     .title
         font-size: 23px
