@@ -256,15 +256,18 @@ validateForms('#consultation form');
 
 $('input[name=phone]').mask("+38(999) 999-99-99");
 
-// $('form').submit(function (e) {
+
+
+// $('form').submit(function(e) {
 //   e.preventDefault();
 //   $.ajax({
-//     type: 'POST',
-//     url: "mailer/smart.php",
-//     data: $(this).serialize(),
-//   }).done(function () {
-//       $(this).find('input').val('');
-//       $("#consultation").fadeOut();
+//       type: "POST",
+//       url: "mailer/smart.php",
+//       data: $(this).serialize()
+//   }).done(function() {
+    
+//       $(this).find("input").val("");
+//       $('#consultation').fadeOut();
 //       $('.overlay, #thanks').fadeIn('slow');
 
 //       $('form').trigger('reset');
@@ -272,36 +275,21 @@ $('input[name=phone]').mask("+38(999) 999-99-99");
 //   return false;
 // });
 
-$('form').submit(function(e) {
-  e.preventDefault();
-  $.ajax({
-      type: "POST",
-      url: "mailer/smart.php",
-      data: $(this).serialize()
-  }).done(function() {
-      $(this).find("input").val("");
-      $('#consultation').fadeOut();
-      $('.overlay, #thanks').fadeIn('slow');
-
-      $('form').trigger('reset');
-  });
-  return false;
-});
-
-//==============================//
+//======feed-form========================//
 
 $(function() {
-  $(".g-form").submit(function (event) {
-    event.preventDefault();
+  $(".feed-form").submit(function (event) {
+    if($(".reg").val() == "") return;
+        event.preventDefault();
  
     // Ссылка, которую получили на этапе публикации приложения
-    let appLink = "https://script.google.com/macros/s/AKfycbwzcVo8-GyyhzDez08lrz21Pu1ZpByzg1o-3r8NvPAbNJsjWQAJCYV-6DE1jllHv_1z/exec";
+    let appLink = "https://script.google.com/macros/s/AKfycbzTumkUfaSq9lGk37u7YLquL4vTiTO123AlIy0j/exec";
  
     // Сообщение при успешной отправке данных
-    let successRespond = 'Сообщение успешно отправлено. Посмотрите результат <a target="_blank" href="https://docs.google.com/spreadsheets/d/1XcTivCQL4EZJf1x2kB4UwGj5bAi0sfpx1PwtaKgOWHo/edit?usp=sharing">тут</a>';
+    let successRespond = 'Сообщение успешно отправлено. Посмотрите результат <a target="_blank" href="https://docs.google.com/spreadsheets/d/1drsOujAFnyI0uK0HbbKoDYqymfzIusUuQCfQoAgiWgs/edit?usp=sharing">тут</a>';
  
     // Сообщение при ошибке в отправке данных
-    let errorRespond = 'Не удалось отправить сообщение. Cвяжитесь с администратором сайта по адресу <a href="mailto:smart-landing@ya.ru">smart-landing@ya.ru</a>';
+    let errorRespond = 'Не удалось отправить сообщение. Cвяжитесь с администратором сайта по адресу <a href="mailto:alex.sherbina.work@gmail.com">alex.sherbina.work@gmail.com</a>';
  
     // Id текущей формы
     let form = $('#' + $(this).attr('id'))[0];
@@ -310,19 +298,19 @@ $(function() {
     let formRespond = $(this).find('.g-form__title_respond');
  
     // h2 с заголовком формы
-    let formTitle = $(this).find('.g-form__title_main');
+    let formTitle = $(this).find('.modal__subtitle'); 
  
     // Блок прелоадера
     let preloader = $(this).find('.g-form__preloader');
  
     // Кнопка отправки формы
-    let submitButton = $(this).find('.g-form__button');
+    let submitButton = $(this).find('.btn_submit-push');
  
- 
+
     // FormData
     let fd = new FormData(form);
- 
- 
+     
+       
     $.ajax({
  
       url: appLink,
@@ -365,9 +353,12 @@ $(function() {
      
     // Возвращаем активность кнопке отправки
     submitButton.prop('disabled', false);
- 
+    
+          $('#consultation').fadeOut();
+           $('.overlay, #thanks').fadeIn('slow');
+             $('form').trigger('reset');
       // Очищаем поля формы
-      form.reset();
+     // form.reset();
  
     } else {
       formTitle.css({

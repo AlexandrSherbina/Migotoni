@@ -337,42 +337,49 @@
 
 
                 <div class="overlay">
-                  <div class="modal__body">
+                  <div class="modal__body">                 
                     <div class="modal" id="consultation">
-                        <div class="modal__close">&times;</div>
-                        <div class="modal__subtitle">Получить консультацию</div>
-
-                        <form class="feed-form feed-form_mt25" id="form-feed" action="#">
-                            <input name="fname" class="data-type" placeholder="Имя" type="text">
-                            <input name="lname" class="data-type" placeholder="Фамилия" type="text">
-                            <input name="phone" class="data-type" placeholder="Телефон">                          
+                        <div class="modal__close">&times;</div>                       
+                    
+                        <form class="feed-form feed-form_mt25" id="form-feed" method="POST" action="#" autocomplete="off">
+                            <div class="modal__subtitle">Получить консультацию</div>
+                            <!-- <h2 class="g-form__title g-form__title_respond"></h2> -->
+                            <div class="g-form__preloader"></div>
+                            <input class="reg" name="firstName"  required class="data-type" placeholder="Имя" type="text">
+                            <input class="reg" name="lastName"  required class="data-type" placeholder="Фамилия" type="text">
+                            <input class="reg" name="phone"  required class="data-type" placeholder="Телефон">                       
 
                              <div class="feed-form__checkbox">
-                                  <input type="checkbox" id="question1" name="question1" value="question1">
+                                  <input type="checkbox" id="question1" name="fin_question" value="финансовый вопрос">
                                   <label for="question1">у вас финансовый вопрос</label>
                             </div>
                             <div class="feed-form__checkbox">
-                                <input type="checkbox" id="question2" name="question2" value="question2">
+                                <input type="checkbox" id="question2" name="jud_question" value="юридический вопрос">
                                   <label for="question2">у вас юридический вопрос</label>
                             </div>
 
                             <div class="feed-form__checkbox">
-                                <input type="checkbox" id="question3" name="question3" value="question3">
+                                <input type="checkbox" id="question3" name="tech_question" value="технический вопрос">
                                   <label for="question3">у вас технический вопрос</label>
                             </div>    
 
                             <div class="feed-form__option">
                                 <label for="time">Укажите удобное время </br> для обратного звонка с 9 до 20 часов.</label>                                         
                                <input type="time" id="time" name="time"> 
-                            </div>
-   
+                            </div>   
+
                             <div class="feed-form__checkbox">
-                                <input type="checkbox" checked id="agreement2" name="agreement2" value="agreement2">
+                                <input type="checkbox" checked id="agreement2" name="agreement" value="согласен">
                                   <label class="agreement" for="agreement2">Согласитесь с Условиями и политикой</label>
                             </div>
 
-                            <button class="btn btn_submit">ДАЛЕЕ</button>   
-                        </form>
+                            <fieldset style="display: none;" class="g-form__input-wrapper g-form__input-wrapper_hidden">
+                                <label for="honeypot">Помогает бороться со спамом. Должно быть пустым!</label>
+                                <input id="honeypot" type="text" name="honeypot" value="">
+                              </fieldset>
+
+                            <button type="submit" class="btn btn_submit btn_submit-push">ДАЛЕЕ</button>
+                        </form>                      
                     </div>
                     <div class="modal modal_mini" id="thanks">
                         <div class="modal__close">&times;</div>                      
