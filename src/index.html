@@ -337,6 +337,7 @@
 
 
                 <div class="overlay">
+                  <div class="modal__body">
                     <div class="modal" id="consultation">
                         <div class="modal__close">&times;</div>
                         <div class="modal__subtitle">Получить консультацию</div>
@@ -344,8 +345,7 @@
                         <form class="feed-form feed-form_mt25" id="form-feed" action="#">
                             <input name="fname" class="data-type" placeholder="Имя" type="text">
                             <input name="lname" class="data-type" placeholder="Фамилия" type="text">
-                            <input name="phone" class="data-type" placeholder="Телефон">
-                            <!-- <input name="email" required placeholder="Ваш E-mail" type="email">  -->
+                            <input name="phone" class="data-type" placeholder="Телефон">                          
 
                              <div class="feed-form__checkbox">
                                   <input type="checkbox" id="question1" name="question1" value="question1">
@@ -365,26 +365,17 @@
                                 <label for="time">Укажите удобное время </br> для обратного звонка с 9 до 20 часов.</label>                                         
                                <input type="time" id="time" name="time"> 
                             </div>
-                                                           
-                         
-                            
-
+   
                             <div class="feed-form__checkbox">
                                 <input type="checkbox" checked id="agreement2" name="agreement2" value="agreement2">
                                   <label class="agreement" for="agreement2">Согласитесь с Условиями и политикой</label>
                             </div>
 
-                            <button class="btn btn_submit">ДАЛЕЕ</button>
-
-                            
+                            <button class="btn btn_submit">ДАЛЕЕ</button>   
                         </form>
-                        <!-- <div class="modal" id="ex1"> </div> -->
-                        <!-- <button class="btn"><a href="#" rel="modal:close">Close</a></button> -->
                     </div>
-
                     <div class="modal modal_mini" id="thanks">
-                        <div class="modal__close">&times;</div>
-                        <!-- <div class="modal__subtitle">  </div> -->
+                        <div class="modal__close">&times;</div>                      
                         <div class="modal__descr">
                             БЛАГОДАРИМ ЗА ПРОЯВЛЕННЫЙ ИНТЕРЕС
                             ОЖИДАЙТЕ ЗВОНКА НАШЕГО СПЕЦИАЛИСТА
@@ -392,21 +383,54 @@
                         <button type="button" class="btn btn_submit back-home"><a href="#home">вернуться на главную
                                 страницу</a></button>
                     </div>
+                    
+                    <!-- <form class="g-form" id="g-form-1" method="POST" action="" autocomplete="off">
+                        <h2 class="g-form__title g-form__title_main">Оставьте заявку прямо сейчас и получите скидку 10%</h2>
+                        <h2 class="g-form__title g-form__title_respond"></h2>
+                        <div class="g-form__preloader"></div>
+                        <div class="g-form__inputs">
+                          <fieldset class="g-form__input-wrapper">
+                            <input class="g-form__input g-form__input_name" id="name" name="Имя" placeholder="Введите ваше имя" required>
+                          </fieldset>
+                       
+                          <fieldset class="g-form__input-wrapper">
+                            <input class="g-form__input g-form__input_tel" id="tel" name="Телефон" placeholder="Введите ваш телефон">
+                          </fieldset>
+                       
+                          <fieldset class="g-form__input-wrapper">
+                            <input id="email" name="Email" type="email" value=""
+                            required placeholder="Введите ваш email"/>
+                          </fieldset>
+                       
+                          <fieldset class="g-form__input-wrapper">
+                            <input id="arbitrary-field" name="Произвольное поле" placeholder="Произвольное поле для теста">
+                          </fieldset>
+                       
+                          <fieldset class="g-form__input-wrapper">
+                            <textarea id="message" name="Сообщение" rows="10"
+                            placeholder="Введите сообщение"></textarea>
+                          </fieldset>
+                       
+                          <fieldset class="g-form__input-wrapper g-form__input-wrapper_hidden">
+                            <label for="honeypot">Помогает бороться со спамом. Должно быть пустым!</label>
+                            <input id="honeypot" type="text" name="honeypot" value="">
+                          </fieldset>
+                       
+                          <div class="g-form__button-wrapper">
+                            <button class="g-form__button">Получить скидку</button>
+                          </div>
+                        </div>
+                      </form> -->
+
+                  </div>
+
+                   
 
                 </div>
-
-
-
-
-
-
-
-
-
         </main>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->

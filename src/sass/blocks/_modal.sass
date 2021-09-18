@@ -6,19 +6,21 @@
     top: 0
     left: 0
     background-color: rgba(0,0,0, .56)
-   
+    overflow-y: auto
+    overflow-x: hidden
+.modal__body
+    min-height: 100%
+    +flex
+    padding: 30px 20px
 
 .modal 
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)   
+    // position: absolute
+    // top: 50%
+    // left: 50%
+    // transform: translate(-50%, -50%)   
     max-width: 500px
-    // flex: 0 0 75%
-    // max-width: 75%
-    
     background: linear-gradient(180deg,#30cfd0 0,#330867 100%)
-    padding: 38px 40px 40px 40px
+    padding: 40px
     &__close 
         position: absolute
         top: -11px
