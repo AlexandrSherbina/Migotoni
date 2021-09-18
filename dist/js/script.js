@@ -1,4 +1,3 @@
-console.log('TEst scriptjs');
 
 //= Form===========================//
 
@@ -204,20 +203,20 @@ $('.modal__close, .back-home').on('click', function () {
 
 $('#consultation form').validate({
   rules: {
-    fname:  {
+    firstName:  {
       required: true,
       minlength: 2
     },
-    lname: "required",
+   lastName: "required",
     phone: "required"
   },
   messages: {
-    fname: 
+    firstName: 
     {
       required: "Пожалуйста введите свою фамилию",
       minlength: jQuery.validator.format("Введите {0} символа!")
     },
-    lname: "Пожалуйста введите свое имя",
+   lastName: "Пожалуйста введите свое имя",
     phone: "Пожалуйста введите свой телефон",
     email: {
       required: "Пожалуйста введите свою почту",
@@ -229,20 +228,20 @@ $('#consultation form').validate({
 function validateForms(form) {
   $(form).validate({
     rules: {
-      fname:  {
+      firstName:  {
         required: true,
         minlength: 2
       },
-      lname: "required",
+     lastName: "required",
       phone: "required"
     },
     messages: {
-      fname: 
+      firstName: 
       {
         required: "Пожалуйста введите свою фамилию",
         minlength: jQuery.validator.format("Введите {0} символа!")
       },
-      lname: "Пожалуйста введите свое имя",
+     lastName: "Пожалуйста введите свое имя",
       phone: "Пожалуйста введите свой телефон",
       email: {
         required: "Пожалуйста введите свою почту",
@@ -283,13 +282,13 @@ $(function() {
         event.preventDefault();
  
     // Ссылка, которую получили на этапе публикации приложения
-    let appLink = "https://script.google.com/macros/s/AKfycbzTumkUfaSq9lGk37u7YLquL4vTiTO123AlIy0j/exec";
+    let appLink = "https://script.google.com/macros/s/AKfycbxTPyLeeXoEC7z1x71TtTEfoV9QkzmKkgOy_g6H-Q/exec";
  
     // Сообщение при успешной отправке данных
-    let successRespond = 'Сообщение успешно отправлено. Посмотрите результат <a target="_blank" href="https://docs.google.com/spreadsheets/d/1drsOujAFnyI0uK0HbbKoDYqymfzIusUuQCfQoAgiWgs/edit?usp=sharing">тут</a>';
+    let successRespond = 'Сообщение успешно отправлено. Посмотрите результат <a target="_blank" href="https://docs.google.com/spreadsheets/d/1ct9vdiOK4GgQ99UFcC7eDSjW6pfiCGNR4KysMPJn7z4/edit?usp=sharing">тут</a>';
  
     // Сообщение при ошибке в отправке данных
-    let errorRespond = 'Не удалось отправить сообщение. Cвяжитесь с администратором сайта по адресу <a href="mailto:alex.sherbina.work@gmail.com">alex.sherbina.work@gmail.com</a>';
+    let errorRespond = 'Не удалось отправить сообщение. Cвяжитесь с администратором сайта по адресу <a href="mailto:landing.migotoni@gmail.com">landing.migotoni@gmail.com</a>';
  
     // Id текущей формы
     let form = $('#' + $(this).attr('id'))[0];

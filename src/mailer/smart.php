@@ -17,13 +17,13 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'daos147@gmail.com';                 // Наш логин
-$mail->Password = 'daos830312daos';                           // Наш пароль от ящика
+$mail->Username = 'landing.migotoni@gmail.com';                 // Наш логин
+$mail->Password = 'migotoni';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('migotoni@gmail.com', 'Migotoni Landing Page');   // От кого письмо 
-$mail->addAddress('daos147@gmail.com');     // Add a recipient
+$mail->setFrom('landing.migotoni@gmail.com', 'Migotoni Landing Page');   // От кого письмо 
+$mail->addAddress('landing.migotoni@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
