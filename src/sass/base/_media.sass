@@ -44,6 +44,8 @@
     .header__background
         top: calc( 77px + (77 + 20) * ((100vw - 320px) / (1280 - 320) ))
    
+    .image__wrap 
+       padding: 0 calc( 10px + (270 - 135) * ((100vw - 320px) / (1280 - 320) ))
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,235px)
@@ -73,8 +75,7 @@
             font-size: 30px
             margin-bottom: 30px
    
-    .feed-form__checkbox label.agreement
-            font-size: calc( 14px + (18 - 14) * ((100vw - 320px) / (1280 - 320) ))
+    
     .btn_submit
         font-size: calc( 16px + (25 - 16) * ((100vw - 320px) / (1280 - 320) ))
         margin: 20px 0 20px 0
@@ -131,11 +132,11 @@
     .modal__subtitle
        font-size: calc(16px + (34 - 16) * ((100vw - 320px)/ (1080 - 320)))
     .feed-form input
-        font-size: calc(14px + (31 - 14) * ((100vw - 320px)/ (1000 - 320)))
+        font-size: calc(14px + (26 - 14) * ((100vw - 320px)/ (1080 - 320)))
     .feed-form input.data-type
-        margin-bottom:  calc(10px + (40 - 20) * ((100vw - 320px)/ (1000 - 320)))
+        margin-bottom:  calc(10px + (40 - 20) * ((100vw - 320px)/ (1080 - 320)))
     .feed-form__checkbox 
-        font-size: calc(14px + (28 - 14) * ((100vw - 320px)/ (1080 - 320)))
+        font-size: calc(14px + (24 - 14) * ((100vw - 320px)/ (1080 - 320)))
         
 @media (max-width: 991px)
     .header
@@ -392,14 +393,19 @@
             padding: 10px 5px
         .btn__arrow
             margin-left: 5px
+        
     .modal .error
         font-size: calc(14px + (20 - 18) * ((100vw - 320px)/ (533 - 320)))
+    .feed-form__checkbox label.agreement
+            font-size: calc( 12px + (16 - 12) * ((100vw - 320px) / (533 - 320) ))
     .feed-form__option
         font-size: calc(14px + (16 - 14) * ((100vw - 320px)/ (533 - 320)))
 
 @media only screen and (max-width : 420px)
     .title
         font-size: 25px
+    .feed-form__checkbox label
+        margin-left: 0
    
 
 @media only screen and (max-width : 360px)

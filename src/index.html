@@ -42,10 +42,7 @@
                 <h2 class="title image__title">Функционал приложения</h2>
                 <div class="image__wrap">
                     <div class="image__video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eASOKdZUBt4"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Byw2ersqIfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </section>
@@ -347,9 +344,9 @@
                             <!-- <h2 class="g-form__title g-form__title_respond"></h2> -->
                             <!-- <div class="g-form__preloader"></div> -->
                             
-                            <input class="reg" name="firstName"  required class="data-type" placeholder="Имя" type="text">
-                            <input class="reg" name="lastName"  required class="data-type" placeholder="Фамилия" type="text">
-                            <input class="reg" name="phone"  required class="data-type" placeholder="Телефон">                       
+                            <input class="reg1" name="firstName"  required class="data-type" placeholder="Имя" type="text">
+                            <input class="reg2" name="lastName"  required class="data-type" placeholder="Фамилия" type="text">
+                            <input class="reg3" name="phone"  required class="data-type" placeholder="Телефон">                       
 
                              <div class="feed-form__checkbox">
                                   <input type="checkbox" id="question1" name="fin_question" value="финансовый вопрос">
@@ -367,13 +364,16 @@
 
                             <div class="feed-form__option">
                                 <label for="time">Укажите удобное время </br> для обратного звонка с 9 до 20 часов.</label>                                         
-                               <input type="time" id="time" name="time"> 
+                               <input type="time" id="time" name="time-calling"> 
                             </div>   
 
                             <div class="feed-form__checkbox">
                                 <input type="checkbox" checked id="agreement2" name="agreement" value="согласен">
                                   <label class="agreement" for="agreement2">Согласитесь с Условиями и политикой</label>
                             </div>
+                            <fieldset style="display: none;">
+                                <input id="time-zone" type="text" name="time_zone" value="">
+                            </fieldset>
 
                             <fieldset style="display: none;" class="g-form__input-wrapper g-form__input-wrapper_hidden">
                                 <label for="honeypot">Помогает бороться со спамом. Должно быть пустым!</label>
@@ -392,29 +392,15 @@
                         <button type="button" class="btn btn_submit back-home"><a href="#home">вернуться на главную
                                 страницу</a></button>
                     </div>
-                    
-             
-
-                  </div>
-
-                   
-
+                 </div>
                 </div>
         </main>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script> -->
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-        <!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script> -->
         <script src="js/jquery.validate.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/script.js"></script>
-
-
 </body>
-
 </html>
