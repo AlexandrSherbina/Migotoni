@@ -10,7 +10,7 @@
             font-size: calc( 16px + (36 - 18) * ((100vw - 320px) / (1600 - 320) ))
         &__background            
             img
-                max-width: calc( 50px + (325 - 120) * ((100vw - 320px) / (1600 - 320) ))
+                max-width: calc( 58px + (325 - 120) * ((100vw - 320px) / (1600 - 320) ))
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,280px)
@@ -70,6 +70,9 @@
         &__sub-wrap
             grid-column-gap: 100px
             justify-content: space-between
+    .chart-wrap
+        padding: 0px calc(20px + (70 - 70) * ((100vw - 320px)/ (1280 - 320))) 0px calc(20px + (120 - 120) * ((100vw - 320px)/ (1280 - 320)))
+
     .modal 
         &__subtitle 
             font-size: 30px
@@ -268,9 +271,11 @@
         margin: calc(20px + (150 - 70) * ((100vw - 320px)/ (767 - 320))) 0px
 
     .chart-wrap
-        padding: 0px calc(20px + (70 - 70) * ((100vw - 320px)/ (767 - 320))) 0px calc(20px + (120 - 120) * ((100vw - 320px)/ (767 - 320)))
+        //padding: 0px calc(20px + (70 - 70) * ((100vw - 320px)/ (767 - 320))) 0px calc(20px + (120 - 120) * ((100vw - 320px)/ (767 - 320)))
     
 @media only screen and (max-width : 600px)
+    .title
+        font-size: calc(20px + (36 - 20) * ((100vw - 320px)/ (600 - 320)))
     .header
       &__title 
         font-size: calc(14px + (36 - 34) * ((100vw - 320px)/ (600 - 320)))
@@ -280,6 +285,9 @@
         text-shadow: black 0 0 1px  
     .title__uppercase       
         text-align: center
+ 
+       
+
     .overview__app      
         &-title.hide
             display: none
@@ -319,8 +327,7 @@
 
 @media only screen and (max-width : 533px)
     .title
-        text-align: center
-        font-size: 30px
+        text-align: center      
         margin-left: 0
     .header
         &__block
@@ -331,7 +338,7 @@
         &__logo
             margin-top: 20px
         &__background
-            top: calc( 154px + (77 + 20) * ((100vw - 320px) / (1280 - 320) ))
+            top: calc( 83px + (77 + 20) * ((100vw - 320px) / (1280 - 320) ))
         
         &__description
             font-size: 14px
@@ -402,8 +409,7 @@
         font-size: calc(14px + (16 - 14) * ((100vw - 320px)/ (533 - 320)))
 
 @media only screen and (max-width : 420px)
-    .title
-        font-size: 25px
+   
     .feed-form__checkbox label
         margin-left: 0
    
@@ -413,9 +419,16 @@
     .header  
         &__title
             margin-left: 48px
+        &__logo
+            order: 1
+            margin: 20px auto
+        &__logo img
+            max-width: 150px
               
         &__item, &__list-title
-            font-size: 14px         
+            font-size: 14px        
+    .image 
+        margin: 40px auto 80px     
     .app
         &__wrap
             grid-template-columns: repeat(auto-fill,210px)
