@@ -1,84 +1,5 @@
 
-//= Form===========================//
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const form = document.getElementById('form');
-//     form.addEventListener('submit', formSend);
-
-//     async function formSend(e) {
-//       e.preventDefault();
-//       let error = formValidate(form);
-
-//       let formData = new FormData(form);
-
-//       if (error === 0) {
-//         form.classList.add('_sending');
-
-//         let response = await fetch('sendmail.php', {
-//           method: 'POST',
-//           body: formData
-//         } );
-
-//         if (response.ok) {
-//           let result = await response.json();
-//           alert(result.messsage);
-//           //formPreview.innerHTML = '';
-//           form.reset();
-//           form.classList.remove('_sending');
-//         } else {
-//           alert('Ошибка');
-//           form.classList.remove('_sending');
-//         }
-
-//       } else {
-//         alert('Заполните обязательные поля');
-//       }
-//     }
-
-//     function formValidate(form) {
-//       let error = 0;
-//       let formReq = document.querySelectorAll('._req');
-
-//       for (let index = 0; index < formReq.length; index++) {
-//         const input = formReq[index];
-//         formRemoveError(input);
-
-//         if (input.classList.contains('_email')) {
-//             if (emailText(input)) {
-//               formAddError(input);
-//               error++;
-//             }
-//         } else if( input.getAttribute('type') === "checkbox" && input.checked === false) {
-//           formAddError(input);
-//           error++;
-//         } else {
-//             if (input.value === '') {
-//               formAddError(input);
-//               error++;
-//             }
-//         }
-        
-//       }
-
-//       return error;
-//     }
-
-//     function formAddError(input) {
-//       input.parentElement.classList.add('_error');
-//       input.classList.add('_error');
-//     }
-
-//     function formRemoveError(input) {
-//       input.parentElement.classList.remove('_error');
-//       input.classList.remove('_error');
-//     }
-
-
-
-// });
-
-
-// Modal
+// Modal Close / Open
 
 $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
@@ -88,6 +9,8 @@ $('.modal__close, .back-home').on('click', function () {
    $('.overlay, #consultation, #thanks').fadeOut('slow');
 });
 
+
+//=== Validate form =============================//
 
 $('#consultation form').validate({
   rules: {
@@ -141,27 +64,9 @@ function validateForms(form) {
 
 validateForms('#consultation form');
 
+
+// == Mask phone ======================================//
 $('input[name=phone]').mask("+38(999) 999-99-99");
-
-
-
-// $('form').submit(function(e) {
-//   e.preventDefault();
-//   $.ajax({
-//       type: "POST",
-//       url: "mailer/smart.php",
-//       data: $(this).serialize()
-//   }).done(function() {
-    
-//       $(this).find("input").val("");
-//       $('#consultation').fadeOut();
-//       $('.overlay, #thanks').fadeIn('slow');
-
-//       $('form').trigger('reset');
-//   });
-//   return false;
-// });
-
 
 
 //=============time ZOne ===========//
@@ -171,7 +76,7 @@ $('input[name=phone]').mask("+38(999) 999-99-99");
 // //console.log(tZone.value);
 
 
-//======feed-form========================//
+//====== Form - feed ========================//
 
 
 
@@ -206,10 +111,6 @@ $(function() {
  
     // Кнопка отправки формы
     let submitButton = $(this).find('.btn_submit-push');
-
-
-
- 
 
     // FormData
     let fd = new FormData(form);

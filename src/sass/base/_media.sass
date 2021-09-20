@@ -124,6 +124,12 @@
             line-height: 48px
         &__title-sub         
             font-size: 72px
+
+    .chart-canvas
+        display: none
+    .chart-img
+        display: block
+
     .registry         
         &__title
             margin-left: 0
@@ -270,8 +276,6 @@
     .chart
         margin: calc(20px + (150 - 70) * ((100vw - 320px)/ (767 - 320))) 0px
 
-    .chart-wrap
-        //padding: 0px calc(20px + (70 - 70) * ((100vw - 320px)/ (767 - 320))) 0px calc(20px + (120 - 120) * ((100vw - 320px)/ (767 - 320)))
     
 @media only screen and (max-width : 600px)
     .title
@@ -435,9 +439,7 @@
             
     .overview__app     
         &-title h3
-            font-size: 25px
-
-           
+            font-size: 25px           
         
     .offer       
         &__title
