@@ -14,21 +14,24 @@ $('.modal__close, .back-home').on('click', function () {
 
 $('#consultation form').validate({
   rules: {
-    firstName:  {
+    'Имя':  {
       required: true,
       minlength: 2
     },
-   lastName: "required",
-    phone: "required"
+   'Фамилия': {
+     required: true,
+     minlength: 2
+   },
+    'Телефон': "required"
   },
   messages: {
-    firstName: 
+    'Фамилия': 
     {
       required: "Пожалуйста введите свою фамилию",
       minlength: jQuery.validator.format("Введите {0} символа!")
     },
-   lastName: "Пожалуйста введите свое имя",
-    phone: "Пожалуйста введите свой телефон",
+   'Имя': "Пожалуйста введите свое имя",
+    'Телефон': "Пожалуйста введите свой телефон",
     email: {
       required: "Пожалуйста введите свою почту",
       email: "Неправильно введен адресс почты name@domain.com"
@@ -39,21 +42,21 @@ $('#consultation form').validate({
 function validateForms(form) {
   $(form).validate({
     rules: {
-      firstName:  {
+      'Фамилия':  {
         required: true,
         minlength: 2
       },
-     lastName: "required",
-      phone: "required"
+     'Имя': "required",
+      'Телефон': "required"
     },
     messages: {
-      firstName: 
+      'Фамилия': 
       {
         required: "Пожалуйста введите свою фамилию",
         minlength: jQuery.validator.format("Введите {0} символа!")
       },
-     lastName: "Пожалуйста введите свое имя",
-      phone: "Пожалуйста введите свой телефон",
+     'Имя': "Пожалуйста введите свое имя",
+      'Телефон': "Пожалуйста введите свой телефон",
       email: {
         required: "Пожалуйста введите свою почту",
         email: "Неправильно введен адресс почты name@domain.com"
@@ -66,7 +69,7 @@ validateForms('#consultation form');
 
 
 // == Mask phone ======================================//
-$('input[name=phone]').mask("+38(999) 999-99-99");
+$('input[id=phone]').mask("+38(999) 999-99-99");
 
 
 //=============time ZOne ===========//
